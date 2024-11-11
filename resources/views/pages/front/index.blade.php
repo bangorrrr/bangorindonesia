@@ -24,7 +24,7 @@
                 <div class="d-flex align-items-center shadow">
                 <img
                     class="img-fluid bg-white rounded flex-shrink-1 p-1"
-                    src="{{asset('bangor/img/banner3.jpg')}}"
+                    src="{{asset('bangor/img/banner2.jpg')}}"
                 />
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="d-flex align-items-center shadow">
                 <img
                     class="img-fluid bg-white rounded flex-shrink-1 p-1"
-                    src="{{asset('bangor/img/banner2.jpg')}}"
+                    src="{{asset('bangor/img/banner3.jpg')}}"
                 />
                 </div>
             </div>
