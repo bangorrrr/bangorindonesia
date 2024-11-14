@@ -83,6 +83,7 @@
     </div>
 
     {{-- loader --}}
+
     <div class="loading-clock">
         <div class="loader">
 
@@ -91,6 +92,53 @@
 
     <!-- Bootstrap core JavaScript-->
     @include('includes.editor.script')
+    <script>
+        $(document).ready(function(){
+            function notification(){
+                $.ajax({
+                    url:"{{ route('editor.notif')}}",
+                    type:"GET",
+                    dataType:"json",
+                    success: function(res){
+                        let totalNotif = res.total;
+                        if(totalNotif > 0){
+                            $("#notif").text(totalNotif);
+                        }else{
+                            $("#notif").text(totalNotif);
+                        }
+                        $('#notif-list').empty();
+                        if(res.contact > 0){
+                            $('#notif-list').append(
+                                `
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                     <div class="icon-cricle bg-primary">
+                                        <i class="fas fa-envelope fa-fw"></i>
+                                    </div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        ada ${res.contact} pesan dari contact yang belum di baca
+                                    </div>
+                                </a>
+                                `
+                            );
+                        }
+                        if(totalNotif == 0){
+                            $('#notif-list').append(
+                                `
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    no notification
+                                </a>
+                                `
+                            );
+                        }
+                    },
+                });
+            };
+            notification();
+            setInterval(notification, 10000);
+        });
+    </script>
     @yield('script')
 </body>
 

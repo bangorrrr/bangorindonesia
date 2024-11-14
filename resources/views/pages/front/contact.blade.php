@@ -106,7 +106,7 @@
     </div>
 
      <!-- Contact Start -->
-     {{-- <div class="container-xxl py-5" id="contact">
+     <div class="container-xxl py-5" id="contact">
         <div class="container py-5 px-lg-5">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h5 class="text-primary-gradient fw-medium">Contact Us</h5>
@@ -121,25 +121,25 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required >
                                         <label for="name">Your Name</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required >
                                         <label for="email">Your Email</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Subject">
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone"  required >
                                         <label for="phone">Phone</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px"></textarea>
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" required style="height: 150px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <!-- Contact End -->
   </main>
 
@@ -213,52 +213,52 @@
                 beforeSend: function(){
                     $('.spinner').css('display','flex');
                 },
-                success: function(data){
-                    if(data.success == 1){
-                        $("#contactForm")[0].reset();
-                        toastr_success(data.messages)
-                    }else{
-                        toastr_error(data.messages);
-                    }
-                },
+                success: function(data) {
+                            if(data.success == 1){
+                                toastr_success(data.messages);
+                                redraw();
+                            } else{
+                                toastr_success(data.messages);
+                            }
+                        },
                 complete: function(){
                     $('.spinner').css('display','none');
                 },
             });
         })
         function toastr_success(msg){
-            const Toast = Swal.mixin({
-                toast: true,
-                position: "top-end",
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.onmouseenter = Swal.stopTimer;
-                    toast.onmouseleave = Swal.resumeTimer;
-                }
-                });
-                Toast.fire({
-                icon: "success",
-                title: msg
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
             });
-        }
-        function toastr_error(msg){
-            const Toast = Swal.mixin({
-                toast: true,
-                position: "top-end",
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                    toast.onmouseenter = Swal.stopTimer;
-                    toast.onmouseleave = Swal.resumeTimer;
-                }
-                });
-                Toast.fire({
-                icon: "error",
-                title: msg
+            Toast.fire({
+            icon: "success",
+            title: msg
+        });
+    }
+    function toastr_error(msg){
+        const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.onmouseenter = Swal.stopTimer;
+                toast.onmouseleave = Swal.resumeTimer;
+            }
             });
+            Toast.fire({
+            icon: "error",
+            title: msg
+        });
         }
     });
 </script>

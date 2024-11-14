@@ -28,7 +28,7 @@ class ContactController extends Controller
         $start = $request->input('start', 0);
         $limit = $request->input('limit', 10);
         try {
-            $query = contact::where('name', 'LIKE', '%'.$cari.'%');
+            $query = Contact::where('name', 'LIKE', '%'.$cari.'%');
             $contact = $query->offset($start)
                 ->limit($limit)
                 ->get();
@@ -56,7 +56,7 @@ class ContactController extends Controller
         $id = $request->input('id');
         $user = Auth::user()->name;
         try {
-            $contact = contact::find($id);
+            $contact = Contact::find($id);
             $res = [];
             if ($contact) {
                 $contact->update(['deleted_by'=>$user]);

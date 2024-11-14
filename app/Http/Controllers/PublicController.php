@@ -99,7 +99,7 @@ class PublicController extends Controller
             else{
                 $validData = $validator->validate();
                 contact::create($validData);
-                $res = ['success'=>0, 'messages'=> 'Success'];
+                $res = ['success'=>16, 'messages'=> 'Success'];
             }
         }
         catch (QueryException $e) {

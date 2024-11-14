@@ -39,6 +39,7 @@ Route::prefix('editor')->group(function(){
 
     Route::controller(HomeController::class)->group(function(){
         Route::get('/','index')->name('editor.home');
+        Route::get('notif','notification')->name('editor.notif');
     });
 
     Route::controller(UserController::class)->group(function(){

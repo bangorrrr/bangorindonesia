@@ -11,4 +11,10 @@ class Contact extends Model
     use HasFactory, SoftDeletes;
         protected $table = "contact";
         protected $guarded = ['id'];
+        protected $cast = [
+            'name'=> 'encrypted',
+            'gmail'=> 'encrypted',
+            'phone'=> 'encrypted',
+        ];
+
 }
