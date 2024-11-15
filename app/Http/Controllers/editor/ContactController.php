@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\editor;
 
 use Exception;
-use App\Models\contact;
+use App\Models\Contact;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;

@@ -28,7 +28,7 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered" id="Tcontact" width="100%" cellspacing="0">
+                <table class="table table-bordered" id="Tcontacts" width="100%" cellspacing="0">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -51,7 +51,7 @@
 <script>
 
     $('document').ready(function(e){
-        var Tcontact = $('#Tcontact').DataTable({
+        var Tcontacts = $('#Tcontacts').DataTable({
             "responsive": true,
             'searching': false,
             "processing": true,
@@ -90,16 +90,16 @@
             ]
         });
         function redraw(){
-            Tcontact.draw();
+            Tcontacts.draw();
         }
 
         $("#btn-cari").click(function(){
             let search = $("#cari").val();
-            Tcontact.draw();
+            Tcontacts.draw();
         });
 
-        $("#Tcontact tbody").on('click','.btnDelete',function(){
-            let data = Tcontact.row( $(this).parents('tr') ).data();
+        $("#Tcontacts tbody").on('click','.btnDelete',function(){
+            let data = Tcontacts.row( $(this).parents('tr') ).data();
             let idData = data.id;
             Swal.fire({
                 title: "Are you sure?",
