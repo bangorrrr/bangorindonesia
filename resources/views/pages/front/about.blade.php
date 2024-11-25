@@ -2,10 +2,11 @@
 @section('content')
     <div class="container-xxl pt-5">
         <marquee class="mt-5" scrollamount="10">
-        <h3>THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST
+        <h1>THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST
             GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST GROWING LOCAL
             BURGER CHAIN IN INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN IN
-            INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA</h3></marquee>
+            INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA</h1>
+        </marquee>
     </div>
     <!-- story Start -->
     <div class="container-xxl" id="story ">
@@ -178,7 +179,7 @@
               class="position-relative col-lg-6 fadeInUp"
               data-wow-delay="0.1s"
             >
-            <img class="img-fluid" src="{{asset('bangor/img/tersertifikasihalal.png')}}" alt=" tersertfikasi halal burger bangor">
+            <img class="img-fluid halal" src="{{asset('bangor/img/tersertifikasihalal.png')}}" alt="tersertfikasi halal burger bangor">
 
             </div>
             <div

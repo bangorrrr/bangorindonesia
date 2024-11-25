@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
+use App\Models\Magz;
 use App\Models\Contact;
 use App\Models\MasterHead;
-use App\Models\MasterCarousel;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Models\MasterCarousel;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Log;
 use App\Http\Controllers\Controller;
@@ -14,7 +16,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-use Exception;
 
 class PublicController extends Controller
 {
@@ -63,11 +64,13 @@ class PublicController extends Controller
     public function getData():JsonResponse
     {
         $masterHead = MasterHead::select('title','subtitle','image')->latest()->first();
-        $contact = Contact::select('name','email','phone','message')->get();
+        $contact = Contact::select('name','email','phone','message')->latest()->first();
         $mastercarousel = MasterCarousel::select('title','image')->get();
+        $magz = Magz::select('title','image','link')->get();
         $data = [
             'master_head' => $masterHead,
             'master_carousel' => $mastercarousel,
+            'magz' => $magz,
         ];
         return response()->json($data);
     }

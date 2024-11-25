@@ -64,14 +64,13 @@
     </div>
   </div>
 
-  <div class="container-xxl">
-    <div class="text-center">
+  <div class="container-xxl pemesanan">
+    <div>
       <h1>Tata Cara Pemesanan</h1>
       <h3>step 1</h3>
       <p>
-        Customer menghubungi nomor berikut <a href="<a
-          href="https://wa.me/6281318752885"
-          >0813-1875-2885</a
+        Customer menghubungi nomor berikut <a href="https://wa.me/6281318752885"
+          >0813-1875-2885</
         >
       </p>
       <h3>step 2</h3>

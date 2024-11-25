@@ -1,11 +1,13 @@
 @extends('layouts.front2')
 @section('content')
-<marquee class="position-relative py-5 mt-5" scrollamount="10"
+<marquee class="position-relative pt-5 mt-5" scrollamount="10"
         ><h1>
-          THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST
-          GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST GROWING LOCAL
-          BURGER CHAIN IN INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN IN
-          INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA
+            5 Years Dedicated
+            The Unexpected Journey
+            >60 Months
+>660 Outlets
+>60 Million Burgers Sold
+>6000 Job Oppotunities
         </h1></marquee
       >
 

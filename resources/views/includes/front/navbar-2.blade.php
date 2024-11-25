@@ -22,6 +22,7 @@
           <a href="{{route('public.menu')}}" class="nav-item nav-link {{Request::is('menu') ? 'active' : '' }}">Menu</a>
           <a href="{{route('public.store')}}" class="nav-item nav-link {{Request::is('store') ? 'active' : '' }}">Store</a>
           <a href="{{route('public.partnership')}}" class="nav-item nav-link {{Request::is('partnership') ? 'active' : '' }}">Partnership</a>
+          <a href="https://blog.burgerbangorindonesia.com/" class="nav-item nav-link">Blog</a>
           {{-- <a href="{{route('public')}}" class="nav-item nav-link " >Blog</a> --}}
           <div class="nav-item dropdown">
             <a

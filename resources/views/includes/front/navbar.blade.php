@@ -22,6 +22,7 @@
           <a href="{{route('public.menu')}}" class="nav-item nav-link {{Request::is('menu') ? 'active' : '' }}">Menu</a>
           <a href="{{route('public.store')}}" class="nav-item nav-link {{Request::is('store') ? 'active' : '' }}">Store</a>
           <a href="{{route('public.partnership')}}" class="nav-item nav-link {{Request::is('partnership') ? 'active' : '' }}">Partnership</a>
+          <a href="https://blog.burgerbangorindonesia.com/" class="nav-item nav-link">Blog</a>
           {{-- <a href="{{route('public')}}" class="nav-item nav-link " >Blog</a> --}}
           <div class="nav-item dropdown">
             <a
@@ -61,7 +62,7 @@
               BURGER BANGOR BURGERNYA INDONESIA
             </h1>
             <p class="text-white pb-3 animated slideInDown" id="masthead-subtitle">
-              Burger Bangor sebagai number #1 local burger company in Indonesia selalu memberikan kualitas terbaik bagi Sobat Bangor. Dengan bahan baku terbaik 100% daging sapi Australia berkualitas tinggi dan rendah lemak, roti, dan saus homemade membawa kami sebagai brand burger lokal yang sudah tersebar di 600 gerai di seluruh Indonesia dan akan terus bertambah, bertumbuh, berkembang hingga ke seluruh dunia.
+            Burger Bangor sebagai number #1 local burger company in Indonesia selalu memberikan kualitas terbaik dan pelayanan terbaik dengan bangor care yang selalu mendengar suara dari Sobat Bangor. Burger Halal rendah lemak dengan 100% premium beef , roti, dan saus homemade membawa kami sebagai brand burger lokal yang sudah tersebar di seluruh Indonesia dan akan terus bertambah, bertumbuh, berkembang hingga ke seluruh dunia.
             </p>
             <div class="socmed d-flex align-items-center mt-4">
               <a class="btn btn-outline-primary btn-square me-3" href="https://www.facebook.com/p/Burger-Bangor-100070755492590/" target="_blank"
@@ -88,11 +89,11 @@
             data-wow-delay="0.3s"
           >
             <div class="owl-carousel screenshot-carousel">
-              <img class="img-fluid" src="{{asset('bangor/img/screenshot-1.png')}}" alt="" />
-              <img class="img-fluid" src="{{asset('bangor/img/screenshot-2.png')}}" alt="" />
-              <img class="img-fluid" src="{{asset('bangor/img/screenshot-3.png')}}" alt="" />
-              <img class="img-fluid" src="{{asset('bangor/img/screenshot-4.png')}}" alt="" />
-              <img class="img-fluid" src="{{asset('bangor/img/screenshot-5.png')}}" alt="" />
+              <img class="img-fluid" src="{{asset('bangor/img/burger-bangor-online.png')}}" alt="burger bangor" />
+              <img class="img-fluid" src="{{asset('bangor/img/lomba-design-burger-bangor.png')}}" alt="burger bangor" />
+              <img class="img-fluid" src="{{asset('bangor/img/burger-bangor-family.png')}}" alt="burger bangor" />
+              <img class="img-fluid" src="{{asset('bangor/img/burger-bangor-gratitude-box.png')}}" alt="burger bangor" />
+              <img class="img-fluid" src="{{asset('bangor/img/menu-promo-oct-2024.png')}}" alt="burger bangor" />
             </div>
           </div>
         </div>

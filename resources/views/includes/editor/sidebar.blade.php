@@ -39,6 +39,12 @@
             <span>Master Carousel</span></a>
     </li>
     <hr class="sidebar-divider">
+    <li class="nav-item {{Request::is('editor/magz') ? 'active' : '' }}">
+        <a class="nav-link" href="{{route('editor.magz')}}">
+            <i class="fas fa-fw fa-book"></i>
+            <span>Magz</span></a>
+    </li>
+    <hr class="sidebar-divider">
     <li class="nav-item {{Request::is('editor/contact') ? 'active' : '' }}">
         <a class="nav-link" href="{{route('editor.contact')}}">
             <i class="fas fa-fw fa-phone"></i>

@@ -16,7 +16,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/jelata.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/jelata.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -24,7 +24,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/juragan.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/juragan.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -32,7 +32,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/ningrat.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/ningrat.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -40,7 +40,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/sultan.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/sultan2.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -48,7 +48,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/pitik.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/pitik.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -56,7 +56,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/pitikfire.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/pitikfire.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -64,7 +64,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/BBQ.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/BBQ.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -72,7 +72,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/fish.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/fish.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -82,7 +82,7 @@
               <div class="text-center">
                 <img
                   src="{{asset('bangor/img/creamygarlic.png')}}"
-                  style="max-width: 250px"
+                  style="max-width: 260px"
                   alt=""
                 />
               </div>
@@ -92,7 +92,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/cheese-jr.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/cheese-jr.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -100,7 +100,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/hotdog.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/hotdog.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -110,7 +110,7 @@
               <div class="text-center">
                 <img
                   src="{{asset('bangor/img/hotdog-bolognese.png')}}"
-                  style="max-width: 250px"
+                  style="max-width: 260px"
                   alt=""
                 />
               </div>
@@ -120,7 +120,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/congor.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/congor.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -128,7 +128,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/bfc.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/bfc.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
             <div
@@ -136,7 +136,7 @@
               data-wow-delay="0.1s"
             >
               <div class="text-center">
-                <img src="{{asset('bangor/img/fries.png')}}" style="max-width: 250px" alt="" />
+                <img src="{{asset('bangor/img/fries.png')}}" style="max-width: 260px" alt="" />
               </div>
             </div>
           </div>

@@ -41,7 +41,7 @@
             <li><strong>Potensi Keuntungan yang Menjanjikan</strong>  Dengan sistem yang telah teruji dan dukungan dari pusat, Anda berpotensi mendapatkan keuntungan yang menarik.</li>
           </ul>
           <a
-            href="https://wa.me/6281586369239"
+            href="https://wa.me/628773092488"
             class="socmed btn btn-outline-primary py-sm-3 px-4 px-sm-5 rounded-pill mt-3"
             >Hubungi kami</a
           >
@@ -87,7 +87,7 @@
             <li><strong>Potensi Keuntungan yang Menjanjikan</strong>  Dengan sistem yang telah teruji dan dukungan dari pusat, Anda berpotensi mendapatkan keuntungan yang menarik.</li>
           </ul>
           <a
-            href="https://wa.me/6281586369239"
+            href="https://wa.me/628773092488"
             class="socmed btn btn-outline-primary py-sm-3 px-4 px-sm-5 rounded-pill mt-3"
             >Hubungi kami</a
           >

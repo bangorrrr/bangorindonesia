@@ -42,10 +42,9 @@
       @include('includes.front.footer')
       <!-- Footer End -->
 
-      <!-- Back to Top -->
-      <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"
-        ><i class="bi bi-arrow-up text-white"></i
-      ></a>
+        <!-- Back to Top -->
+        <a href="https://wa.me/628569018937" class="btn btn-lg  back-to-top text-white pt-2"
+        ><i class="bi bi-whatsapp"></i> Hubungi Bangor Care!</a>
 
 
 

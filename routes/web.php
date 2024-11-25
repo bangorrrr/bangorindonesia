@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\editor\MagzController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\editor\AuthController;
@@ -66,6 +67,14 @@ Route::prefix('editor')->group(function(){
         Route::get('/master-carousel/detail','detail')->name('editor.master-carousel.detail');
         Route::post('/master-carousel/update','updateData')->name('editor.master-carousel.update');
         Route::delete('/master-carousel/delete','deleteData')->name('editor.master-carousel.delete');
+    });
+    Route::controller(MagzController::class)->group(function(){
+        Route::get('/magz','index')->name('editor.magz');
+        Route::get('/magz/data','getData')->name('editor.magz.data');
+        Route::post('/magz/store','storeData')->name('editor.magz.store');
+        Route::get('/magz/detail','detail')->name('editor.magz.detail');
+        Route::post('/magz/update','updateData')->name('editor.magz.update');
+        Route::delete('/magz/delete','deleteData')->name('editor.magz.delete');
     });
 
     Route::controller(ContactController::class)->group(function(){

@@ -1,11 +1,8 @@
 @extends('layouts.front')
 @section('content')
         <marquee class="position-relative" scrollamount="10">
-        <h1>
-        THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST
-        GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST GROWING LOCAL
-        BURGER CHAIN IN INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN IN
-        INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA
+        <h1 style="text-transform: uppercase">
+            sensasi untuk menikmati kelezatan burger Bangor bukan tergantung dari rasa , Harga , selera , gaya hidup , status sosial, maupun level stress anda tapi lebih kepada bagaimana anda bersyukur hari ini.
         </h1>
     </marquee>
 
@@ -14,28 +11,32 @@
         <div class="owl-carousel promo-carousel wow fadeInUp"  data-wow-delay="0.1s">
             <div class="promo-item rounded p-4 " id="carousel_content">
                 <div class="d-flex align-items-center shadow">
-                <img
+                <a href="https://www.instagram.com/p/DB-5n5EzAhF/?hl=en">
+                    <img
                     class="img-fluid bg-white rounded flex-shrink-1 p-1 align-items-center"
-                    src="{{asset('bangor/img/banner1.jpg')}}"
-                />
+                    src="{{asset('bangor/img/banner1.jpg')}}"/>
+                </a>
                 </div>
             </div>
             <div class="promo-item rounded p-4">
                 <div class="d-flex align-items-center shadow">
-                <img
+                    <a href="https://linkr.it/13ZYnV" target="_blank">
+                    <img
                     class="img-fluid bg-white rounded flex-shrink-1 p-1"
-                    src="{{asset('bangor/img/banner2.jpg')}}"
-                />
+                    src="{{asset('bangor/img/banner2.jpg')}}"/>
+                    </a>
                 </div>
             </div>
             <div class="promo-item rounded p-4">
                 <div class="d-flex align-items-center shadow">
-                <img
+                    <a href="https://linkr.it/4yLSwJ" target="_blank">
+                    <img
                     class="img-fluid bg-white rounded flex-shrink-1 p-1"
-                    src="{{asset('bangor/img/banner3.jpg')}}"
-                />
+                    src="{{asset('bangor/img/banner3.jpg')}}"/>
+                    </a>
                 </div>
             </div>
+
         </div>
     </div>
     <!--end carousel-->
@@ -51,7 +52,7 @@
                     <br> <br> Tentu ini bukan sembarang burger pada umumnya, Bangor memiliki varian parodi kasta Jelata, Juragan, Ningrat sampai level Sultan. Dengan racikan citarasa Bangor yang berbeda, burger halal rendah lemak dengan 100% premium beef, juga roti dan saos yang kami buat sendiri kami hadirkan dengan harga yang sangat terjangkau mulai dari Rp. 13.000. Kini lima  tahun telah berlalu dan ternyata 8 dari 10 wanita mengatakan ini benar-benar Bangor, Gawat!
                 </p>
                 <a
-                    href=""
+                    href="{{route('public.about')}}"
                     class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"
                     >Selengkapnya
                 </a>
@@ -96,35 +97,35 @@
                 style="width: 100px; height: 100px"
               >
                 <h3 class="font-weight-bold text-secondary mb-0">
-                  <img src="{{asset('bangor/img/icon.png')}}" style="max-width: 300px" />
+                <img src="{{asset('bangor/img/icon.png')}}" style="max-width: 300px" />
                 </h3>
-              </div>
-              <h3 class="font-weight-bold text-white mt-3 mb-4">
+            </div>
+            <h3 class="font-weight-bold text-white mt-3 mb-4">
                 BURGER BANGOR
-              </h3>
-              <p class="text-white mb-4">
+            </h3>
+            <p class="text-white mb-4">
                 Burger Halal Rendah Lemak dengan 100% Premium Beef
-              </p>
-              <a
+            </p>
+            <a
                 href="https://linkr.it/13ZYnV"
                 class="btn btn-primary-gradient py-3 px-5 mt-2 rounded-pill"
                 >Order on GrabFood</a
-              >
-              <a
+            >
+            <a
                 href="https://www.shopeefood.co.id/"
                 class="btn btn-primary-gradient py-3 px-5 mt-2 rounded-pill"
                 >Order on ShoopeFood</a
-              >
-              <a
+            >
+            <a
                 href="https://linkr.it/4yLSwJ"
                 class="btn btn-primary-gradient py-3 px-5 mt-2 rounded-pill"
                 >Order on GoFood</a
-              >
+            >
             </div>
-          </div>
         </div>
-      </div>
-      <!-- Promotion End -->
+        </div>
+    </div>
+    <!-- Promotion End -->
 
 
     <!-- magazine Start -->
@@ -132,16 +133,7 @@
         <div class="container py-5 px-lg-5">
         <div class="row align-items-center">
             <div class="col-lg-6">
-            <div class="row">
-                <div class="col-4 cards">
-                <img src="{{asset('bangor/img/magazine-48.jpg')}}" alt="" class="img-fluid" />
-                <span>
-                    <a
-                    href="https://drive.google.com/file/d/1WJnZ4dtMcDz3lFPlmaPmG0i6QK0SEmiR/view?usp=drive_link"
-                    >Download</a
-                    >
-                </span>
-                </div>
+            <div class="row" id="magazine">
                 <div class="col-4 cards">
                 <img src="{{asset('bangor/img/magazine-47.jpg')}}" alt="" class="img-fluid" />
                 <span>
@@ -198,7 +190,7 @@
                             Bangor Magazine merupakan majalah yang hadir setiap minggunya untuk memberikan segudang informasi terbaru dan cerita menarik seputar Burger Bangor, Majalah ini dibuat untuk menginspirasi dan membantu Sobat Bangor agar selalu update dengan perkembangan terbaru! Yuk, baca sekarang dan dapatkan informasi menarik setiap minggunya!
                         </p>
                         <a
-                            href="https://drive.google.com/drive/folders/1_Mr3nUIN3QxWsfEGDrjt5slPo0mRNpya"
+                            href="https://drive.google.com/drive/folders/1_Mr3nUIN3QxWsfEGDrjt5slPo0mRNpya" target="_blank"
                             class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3"
                             >Selengkapnya
                         </a>
@@ -247,10 +239,10 @@
                 Burger Bangor siap jadi solusi!
                 </p>
                 <div>
-                 <a
-                  class="btn btn-primary-gradient px-3 mt-auto mx-auto rounded-pill"
-                  href="{{route('public.bigorder')}}"
-                  >selengkapnya</a>
+                <a
+                class="btn btn-primary-gradient px-3 mt-auto mx-auto rounded-pill"
+                href="{{route('public.bigorder')}}"
+                >selengkapnya</a>
 
                 </div>
 
@@ -500,6 +492,8 @@
 
                 let masterhead =  response.master_head;
                 let mastercarousel =  response.master_carousel;
+                let magz =  response.magz;
+
                 if (masterhead){
                     $('#masthead-title').empty().text(masterhead.title);
                     $('#masthead-subtitle').empty().text(masterhead.subtitle);
@@ -524,7 +518,21 @@
                         `;
                         $('#carousel_content').append(carouselItem);
                     });
+                }
 
+                if (magz && magz.length > 0){
+                    $('#magazine').empty();
+                    magz.forEach(function(magz){
+                        let magzItem = `
+                        <div class="col-4 cards">
+                            <img src="/storage/${magz.image}" alt="" class="img-fluid" />
+                            <span>
+                                <a href="${magz.link}">Download</a>
+                            </span>
+                        </div>
+                        `;
+                        $('#magazine').append(magzItem);
+                    });
                 }
             }
         });

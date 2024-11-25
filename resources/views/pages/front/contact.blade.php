@@ -2,16 +2,16 @@
 @section('content')
 <div class="container-xxl pt-5">
     <marquee class="mt-5" scrollamount="10">
-      <h3>
+    <h3>
         THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST
         GROWING LOCAL BURGER CHAIN IN INDONESIA - THE FASTEST GROWING LOCAL
         BURGER CHAIN IN INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN
         IN INDONESIA - THE FASTEST GROWING LOCAL BURGER CHAIN IN INDONESIA
-      </h3></marquee
+    </h3></marquee
     >
-  </div>
+</div>
 
-  <main class="container p-5">
+<main class="container p-5">
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
       <div
         class="col wow fadeInUp"
@@ -84,7 +84,7 @@
       >
         <div class="card bg-dark mb-4 rounded-3 shadow-sm border-primary">
           <div class="card-header py-3 border-primary">
-            <h4 class="my-0 fw-normal">Costumer Care</h4>
+            <h4 class="my-0 fw-normal">Bangor Care</h4>
           </div>
           <div class="card-body">
             <img src="{{asset('bangor/img/partnership.png')}}" style="max-width: 200px" />

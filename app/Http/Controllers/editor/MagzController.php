@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\editor;
 
 use Exception;
-use App\Models\MasterCarousel;
+use App\Models\Magz;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
@@ -14,11 +14,11 @@ use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 
-class MasterCarouselController extends Controller
+class MagzController extends Controller
 {
     public function index()
     {
-        return view('pages.editor.mastercarousel.index');
+        return view('pages.editor.magz.index');
     }
 
     public function getData(Request $request): JsonResponse
@@ -28,15 +28,15 @@ class MasterCarouselController extends Controller
         $start = $request->input('start', 0);
         $limit = $request->input('limit', 10);
         try {
-            $query = MasterCarousel::where('title', 'LIKE', '%'.$cari.'%');
-            $mastercarousel = $query->offset($start)
+            $query = Magz::where('title', 'LIKE', '%'.$cari.'%');
+            $magz = $query->offset($start)
                 ->limit($limit)
                 ->get();
-            $mastercarousel_total = $query->count();
+            $magz_total = $query->count();
             $data['draw'] = intval($request->input('draw'));
-            $data['recordsTotal'] = $mastercarousel_total;
-            $data['recordsFiltered'] = $mastercarousel_total;
-            $data['data'] = $mastercarousel;
+            $data['recordsTotal'] = $magz_total;
+            $data['recordsFiltered'] = $magz_total;
+            $data['data'] = $magz;
         } catch (QueryException $e) {
             $data['error'] = 'Ops terjadi kesalahan saat mengambil data ';
             Log::error('QueryException: '.$e);
@@ -56,7 +56,8 @@ class MasterCarouselController extends Controller
         $user = Auth::user()->id;
         try {
             $rules = [
-                'title' => 'required|string|max:255|unique:master_carousel,title',
+                'title' => 'required|string|max:255|unique:master_head,title',
+                'link' => 'required|string|max:255|unique:master_head,title',
                 'file' => 'required|image|mimes:jpeg,png,jpg|max:2048',
             ];
             $massages = [
@@ -81,7 +82,7 @@ class MasterCarouselController extends Controller
                 $path = $img->storeAs('img', $file_name, 'public');
                 $validData['created_by']=$user;
                 $validData['image'] = $path;
-                $in = MasterCarousel::create($validData);
+                $in = magz::create($validData);
                 $res = ['success' => 1, 'messages' => 'Success Tambah Data'];
             }
         } catch (QueryException $e) {
@@ -99,7 +100,7 @@ class MasterCarouselController extends Controller
     {
         $rescode = 200;
         $id = $request->input('id', 0);
-        $data = MasterCarousel::find($id);
+        $data = magz::find($id);
         $res = [];
         if ($data) {
             $res = ['success' => 1, 'data' => $data];
@@ -138,10 +139,10 @@ class MasterCarouselController extends Controller
                 $res = ['success' => 0, 'messages' => implode(',', $v_error)];
             } else {
                 $validData = $validator->validate();
-                $mastercarousel = MasterCarousel::find($id);
-                if ($mastercarousel) {
+                $magz = magz::find($id);
+                if ($magz) {
                     if($validData['file'] !=null){
-                        $filePath = $mastercarousel['image'];
+                        $filePath = $magz['image'];
                         if (Storage::disk('public')->exists($filePath)) {
                             Storage::disk('public')->delete($filePath);
                         }
@@ -151,7 +152,7 @@ class MasterCarouselController extends Controller
                         $validData['image'] = $path;
                     }
                     $validData['updated_by']=$user;
-                    $mastercarousel->update($validData);
+                    $magz->update($validData);
                     $res = ['success' => 1, 'messages' => 'Success Update Data'];
                 } else {
                     $res = ['success' => 0, 'messages' => 'Data tidak ditemukan'];
@@ -173,11 +174,11 @@ class MasterCarouselController extends Controller
         $rescode = 200;
         $id = $request->input('id');
         try {
-            $mastercarousel = MasterCarousel::find($id);
+            $magz = magz::find($id);
             $res = [];
-            if ($mastercarousel) {
-                $mastercarousel->update(['deleted_by'=>$id]);
-                $mastercarousel->delete();
+            if ($magz) {
+                $magz->update(['deleted_by'=>$id]);
+                $magz->delete();
                 $res = ['success' => 1, 'messages' => 'Success Delete Data'];
             } else {
                 $res = ['success' => 0, 'messages' => 'Data tidak ditemukan'];

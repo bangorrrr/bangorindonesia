@@ -1,6 +1,6 @@
 @extends('layouts.editor')
 @section('title')
-    mastercarousel
+    magz
 @endsection
 
 @section('content')
@@ -8,7 +8,7 @@
 
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">MasterCarousel</h1>
+        <h1 class="h3 mb-0 text-gray-800">magz</h1>
 
         <form action="" id="form_cari" method="post">
             @csrf
@@ -24,7 +24,7 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Data mastercarousel</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Data magz</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -32,12 +32,11 @@
                     <thead>
                         <tr>
                             <th>Title</th>
-
                             <th>Image</th>
+                            <th>Link</th>
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
                 </table>
             </div>
         </div>
@@ -49,7 +48,7 @@
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add new mastercarousel</h5>
+                    <h5 class="modal-title">Add new magz</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -62,12 +61,21 @@
                                 <input type="text" id="title" name="title" class="form-control">
                             </div>
                         </div>
-
                     </div>
+
                     <div class="form-group">
                         <label for="">Image</label>
                         <div id="imagev" class="my-2"></div>
                         <input type="file" id="file" name="file" class="form-control" onchange="ViewImage(this);">
+                    </div>
+
+                    <div class="form-grop row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="">Link</label>
+                                <input type="text" id="link" name="link" class="form-control">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -84,7 +92,7 @@
         <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Update mastercarousel</h5>
+                    <h5 class="modal-title">Update magz</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
@@ -98,12 +106,20 @@
                                 <input type="text" id="title_update" name="title" class="form-control">
                             </div>
                         </div>
-
                     </div>
                     <div class="form-group">
                         <label for="">Image</label>
                         <div id="imagev_update" class="my-2"></div>
                         <input type="file" id="file_update" name="file" class="form-control" onchange="ViewImageUp(this);">
+                    </div>
+                    <div class="form-grop row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label for="">Link</label>
+                                <input type="hidden" id="id_update" name="id" class="form-control">
+                                <input type="text" id="link_update" name="link" class="form-control">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -148,7 +164,7 @@
             "pagingType": "full_numbers",
             "paging":true,
             "ajax":{
-                "url":"{{ route('editor.master-carousel.data') }}",
+                "url":"{{ route('editor.magz.data') }}",
                 "data":function(parm){
                     parm.search = function(){
                         return $('#cari').val()
@@ -158,6 +174,7 @@
             },
             "columns":[
                 {"data": "title","orderable":false},
+                {"data": "link","orderable":false},
                 {
                     "data": "image","orderable":false,render:function(data,type,row){
                         let img_path = row.image;
@@ -190,7 +207,7 @@
         $("#proses_add").click(function(){
             var postData = new FormData($("#addForm")[0]);
             $.ajax({
-                url:"{{ URL::route('editor.master-carousel.store') }}",
+                url:"{{ URL::route('editor.magz.store') }}",
                 data:postData,
                 type:"POST",
                 dataType:"JSON",
@@ -225,7 +242,7 @@
             let data = Tmc.row( $(this).parents('tr') ).data();
             let idData = data.id;
             $.ajax({
-                url:"{{ URL::route('editor.master-carousel.detail') }}",
+                url:"{{ URL::route('editor.magz.detail') }}",
                 type: "GET",
                 data: {
                     "_token": "{{ csrf_token() }}",
@@ -240,12 +257,13 @@
                     if(data.success == 1){
                         let id = data.data.id;
                         let title = data.data.title;
-
+                        let link = data.data.link;
                         let image = data.data.image;
                         $("#updateForm #imagev_update").empty().append('<img id="img" class="img-fluid" src="#">');
                         $('#img').attr('src', "{{ asset('storage') }}/"+image).height(200);
                         $("#id_update").val(id);
                         $("#title_update").val(title);
+                        $("#link_update").val(link);
 
                         $('#file_update').val(null);
 
@@ -262,7 +280,7 @@
         $("#proses_update").click(function(){
             var postData = new FormData($("#updateForm")[0]);
             $.ajax({
-                url:"{{ URL::route('editor.master-carousel.update') }}",
+                url:"{{ URL::route('editor.magz.update') }}",
                 data:postData,
                 type:"POST",
                 dataType:"JSON",
@@ -300,7 +318,7 @@
                 }).then((result) => {
                 if (result.isConfirmed) {
                     $.ajax({
-                        url:"{{ URL::route('editor.master-carousel.delete') }}",
+                        url:"{{ URL::route('editor.magz.delete') }}",
                         type: "DELETE",
                         data: {
                             "_token": "{{ csrf_token() }}",

@@ -181,6 +181,7 @@ hr {
         var(--primary),
         var(--secondary)
     );
+    box-shadow: 2px 2px rgb(255, 255, 255);
 }
 
 /*** Navbar ***/
@@ -463,6 +464,16 @@ hr {
     background-repeat: no-repeat;
 }
 
+.halal {
+    max-width: 250px;
+}
+
+@media (min-width: 500px) {
+    .halal {
+        max-width: 600px;
+    }
+}
+
 @media (min-width: 992px) {
     .video-bangor iframe {
         padding: 5rem;
@@ -520,13 +531,13 @@ hr {
 
     /*** menu ***/
 
-    @media (min-width: 0px) {
+    /* @media (min-width: 0px) {
         .feature-item img {
             background-image: url(../img/bg-menu.png);
             background-size: 100%;
             background-repeat: no-repeat;
         }
-    }
+    } */
     /*** Team ***/
     .team-item {
         position: relative;
@@ -670,6 +681,8 @@ hr {
         -moz-border-radius: 1%;
         -ms-border-radius: 1%;
         -o-border-radius: 1%;
+    }
+    .pemesanan {
     }
 
     /* running text */
